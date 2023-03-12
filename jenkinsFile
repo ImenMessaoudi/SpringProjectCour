@@ -11,8 +11,8 @@ stages {
       stage('git repo & clean') {
 	      steps {
 	        bat "rmdir /s /q SpringProjectCour"
-          bat "git clone https://github.com/ImenMessaoudi/SpringProjectCour.git"
-          bat "mvn clean -f Sp"ringProjectCour"
+                bat "git clone https://github.com/ImenMessaoudi/SpringProjectCour.git"
+         
 	      }
 	    }
 	    
