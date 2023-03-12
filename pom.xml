@@ -14,6 +14,7 @@
     <name>FirstProjectSpring</name>
     <description>FirstProjectSpring</description>
     <properties>
+        <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
         <java.version>11</java.version>
     </properties>
     <dependencies>
