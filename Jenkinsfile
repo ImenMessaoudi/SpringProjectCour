@@ -14,14 +14,14 @@ stages {
 	    }
 	
 	
-	      stage('git repo & clean') {
-	      steps {
-	        //bat "rmdir /s /q SpringProjectCour"
-                bat "git clone https://github.com/ImenMessaoudi/SpringProjectCour.git"
-		//bat "mvn clean -f Sp"ringProjectCour"
-         
-	      }
-	    }
+    stage('Build') {
+      steps {
+        sh './mvnw clean install site surefire-report:report'
+        sh 'tree'
+      }
+    }
+  
+
 	    
             
       
