@@ -23,23 +23,7 @@ stages {
 	      }
 	    }
 	    
-            stage('install') {
-	      steps {
-	        bat "mvn install -f Sp"ringProjectCour"
-	      }
-	    }
-      
-      stage('test') {
-	      steps {
-	        bat "mvn test -f SpringProjectCour"
-	      }
-	    }
-      
-      stage('package') {
-	      steps {
-	        bat "mvn package -f SpringProjectCour"
-	      }
-	    }
+            
       
     
       
