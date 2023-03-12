@@ -12,7 +12,7 @@ stages {
 	      steps {
 	        //bat "rmdir /s /q SpringProjectCour"
                 bat "git clone https://github.com/ImenMessaoudi/SpringProjectCour.git"
-		bat "mvn clean -f Sp"ringProjectCour"
+		//bat "mvn clean -f Sp"ringProjectCour"
          
 	      }
 	    }
