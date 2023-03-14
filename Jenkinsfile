@@ -16,7 +16,7 @@ stages {
 	
     stage('Build') {
       steps {
-        sh './mvnw clean install site surefire-report:report'
+        sh "mvnw clean"
         sh 'tree'
       }
     }
