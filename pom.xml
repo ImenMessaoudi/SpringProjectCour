@@ -14,7 +14,7 @@
     <name>FirstProjectSpring</name>
     <description>FirstProjectSpring</description>
     <properties>
-             <maven-jar-plugin.version>3.2.5</maven-jar-plugin.version>      
+             <maven-jar-plugin.version>3.0.1</maven-jar-plugin.version>      
              <java.version>11</java.version>
     </properties>
     <dependencies>
@@ -67,7 +67,7 @@
            <plugin>
                   <groupId>org.apache.maven.plugins</groupId>
                   <artifactId>maven-resources-plugin</artifactId>
-                  <version>3.2.5</version>
+                  <version>3.0.1</version>
                   </plugin>
         </plugins>
     </build>
