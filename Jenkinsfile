@@ -16,8 +16,7 @@ stages {
 	
     stage('Build') {
       steps {
-        sh "mvnw clean"
-        sh 'tree'
+        sh "mvn clean"
       }
     }
   
