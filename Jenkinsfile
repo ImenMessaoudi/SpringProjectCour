@@ -23,7 +23,7 @@ pipeline {
 	    
 	    stage("compile Project"){
             steps {
-                 sh 'mvn compile'
+                 sh "mvn compile"
                   echo 'compile stage done'
             }
         }
