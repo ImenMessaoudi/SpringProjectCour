@@ -4,6 +4,10 @@ pipeline {
 	    maven "M2_HOME"
 		
     }
+	environment {
+	        PATH = "$PATH:/usr/share/maven"
+	    }
+
     stages {
 	    
 	    stage('Testing maven') {
