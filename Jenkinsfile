@@ -9,6 +9,14 @@ pipeline {
 	    }
 
     stages {
+	     stage('Git clone ') {
+            steps {
+                git branch: 'main',
+                credentialsId: 'Jenkins-GitHub',
+                url: 'https://github.com/ImenMessaoudi/SpringProjectCour.git'
+               
+            }
+        }
 	    
 	    stage('Testing maven') {
 		      steps {
