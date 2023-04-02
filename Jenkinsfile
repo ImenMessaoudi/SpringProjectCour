@@ -12,6 +12,12 @@ pipeline {
 		       echo "Hello Word"
 		      }
 		    }
+	         
+	           stage('Mvn Clean ') {
+                        steps {
+                           sh """mvn clean"""
+                        }
+                    }
 
 
 	    
