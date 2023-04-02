@@ -1,19 +1,23 @@
 pipeline {
 	  agent any
-	
+    tools{
+	    maven "M2_HOME"
+		
+    }
     stages {
-	      stage('Testing maven') {
+	    
+	    stage('Testing maven') {
 		      steps {
 		       sh """mvn -version"""
 		      }
 		    }
-		 stage('hello') {
+	   stage('hello') {
 		      steps {
 		       echo "Hello Word"
 		      }
 		    }
 	         
-	           stage('Mvn Clean ') {
+	    stage('Mvn Clean ') {
                         steps {
                            sh """mvn clean"""
                         }
