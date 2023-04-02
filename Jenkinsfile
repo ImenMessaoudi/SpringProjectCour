@@ -31,7 +31,7 @@ pipeline {
 	         
 	    stage('Mvn Clean ') {
                         steps {
-                           sh """mvn clean"""
+                           sh """mvn clean package"""
                         }
                     }
 
