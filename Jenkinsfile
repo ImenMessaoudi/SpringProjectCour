@@ -2,7 +2,7 @@ pipeline {
 	  agent any
     tools{
 	    maven "M2_HOME"
-	    java "/usr/lib/jvm/jre-11-openjdk"
+	    
 		
     }
 	environment {
