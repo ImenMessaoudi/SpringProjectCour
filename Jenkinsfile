@@ -41,21 +41,12 @@ pipeline {
                         }
                     }
 	    
-	     stage('CODE ANALYSIS with SONARQUBE') {
-        
-
-          steps {
-            withSonarQubeEnv('sonarqube') {
-              sh """mvn sonar:sonar"""
-	           -Dsonar.projectKey=Demo-Project-SonarQube \
-                   -Dsonar.projectName=Demo-Project-SonarQube \
-                   -Dsonar.projectVersion=1.0 \
-                   -Dsonar.sources=src/ \
-                
-            }
-
-           
-        }
+	      stage('SonarQube analysis ') {
+                        steps {
+                           
+                           sh """mvn sonar:sonar"""
+                        }
+	      }
 	    
 	    
            
