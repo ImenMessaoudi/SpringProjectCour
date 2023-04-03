@@ -13,7 +13,10 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>FirstProjectSpring</name>
     <description>FirstProjectSpring</description>
-    
+    <properties>
+             <maven-jar-plugin.version>3.0.1</maven-jar-plugin.version>      
+             <java.version>11</java.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
