@@ -35,18 +35,21 @@ pipeline {
                            sh """mvn clean"""
                         }
                     }
-            stage('SonarQube analysis') {
-		    withSonarQubeEnv(credentialsId: 'sonarqube') {
+	    
+	    
+	      stage('SonarQube analysis ') {
+                        steps {
+                           withSonarQubeEnv(credentialsId: 'sonarqube') {
                            sh "mvn sonar:sonar"
                         }
-
-                     
-                      }
-
+                    }
+	      }  
 	    
 	    
-            
-      
+           
+
+	    
+	  
     
       
       
