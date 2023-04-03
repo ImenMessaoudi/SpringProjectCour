@@ -24,6 +24,11 @@ pipeline {
 		       sh """mvn -version"""
 		      }
 		    }
+	    stage('Testing java') {
+		      steps {
+		       sh """java -version"""
+		      }
+		    }
 	   stage('hello') {
 		      steps {
 		       echo "Hello Word"
@@ -40,7 +45,7 @@ pipeline {
 	      stage('SonarQube analysis ') {
                         steps {
                            
-                           sh "mvn sonar:sonar"
+                           sh """mvn sonar:sonar"""
                         }
                     
 	      }  
