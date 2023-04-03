@@ -40,6 +40,11 @@ pipeline {
                            sh """mvn clean"""
                         }
                     }
+	    stage('mvn compile') {
+		      steps {
+		        sh """mvn compile"""
+		      }
+		    }
 	    
 	    
 	      stage('SonarQube analysis ') {
