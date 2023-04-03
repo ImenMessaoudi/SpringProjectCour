@@ -51,9 +51,7 @@ pipeline {
                    -Dsonar.projectName=Demo-Project-SonarQube \
                    -Dsonar.projectVersion=1.0 \
                    -Dsonar.sources=src/ \
-                   -Dsonar.java.binaries=target/test-classes/com/visualpathit/account/controllerTest/ \
-          
-                   -Dsonar.java.checkstyle.reportPaths=target/checkstyle-result.xml'''
+                
             }
 
             timeout(time: 10, unit: 'MINUTES') {
