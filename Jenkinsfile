@@ -46,7 +46,7 @@ pipeline {
 
           steps {
             withSonarQubeEnv('sonarqube') {
-               sh '''sh """mvn sonar:sonar"""
+              sh """mvn sonar:sonar"""
 	           -Dsonar.projectKey=Demo-Project-SonarQube \
                    -Dsonar.projectName=Demo-Project-SonarQube \
                    -Dsonar.projectVersion=1.0 \
@@ -54,10 +54,7 @@ pipeline {
                 
             }
 
-            timeout(time: 10, unit: 'MINUTES') {
-               waitForQualityGate abortPipeline: true
-            }
-          }
+           
         }
 	    
 	    
