@@ -29,11 +29,12 @@ pipeline {
 		       sh """java -version"""
 		      }
 		    }
-	   stage('hello') {
-		      steps {
-		       echo "Hello Word"
-		      }
-		    }
+	    
+	   stage('MVN-COMPILE') {
+                 steps {
+                    sh """mvn compile"""
+                 }
+            }
 	         
 	    stage('Mvn Clean ') {
                         steps {
@@ -41,12 +42,22 @@ pipeline {
                         }
                     }
 	    
-	      stage('SonarQube analysis ') {
-                        steps {
-                           
-                           sh """mvn sonar:sonar"""
-                        }
-	      }
+	     stage('Mvn-Build') {
+                steps {
+                    script{
+                        sh """mvn -Dmaven.test.failure.ignore=true clean package"""
+                    }
+                }
+            }
+
+            stage('mvn-SONARQUBE') {
+                 steps {
+                    withSonarQubeEnv('sonarqube'){
+                        sh """mvn sonar:sonar"""
+                    }
+
+                 }
+            }
 	    
 	    
            
