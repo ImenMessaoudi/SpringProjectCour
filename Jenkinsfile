@@ -36,6 +36,14 @@ pipeline {
                         }
                     }
 	    
+	    stage('Mvn-Build') {
+                steps {
+                    script{
+                        sh """mvn -Dmaven.test.failure.ignore=true clean package"""
+                    }
+                }
+            }
+	    
 	   stage('MVN-COMPILE') {
                  steps {
                     sh """mvn compile"""
@@ -44,13 +52,7 @@ pipeline {
 	         
 	   
 	    
-	     stage('Mvn-Build') {
-                steps {
-                    script{
-                        sh """mvn -Dmaven.test.failure.ignore=true clean package"""
-                    }
-                }
-            }
+	     
 
             stage('mvn-SONARQUBE') {
                  steps {
