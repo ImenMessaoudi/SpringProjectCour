@@ -6,8 +6,8 @@ pipeline {
 		
     }
 	environment {
-	        PATH = "$PATH:/usr/share/maven/bin"
-	    }
+		PATH =  "/opt/apache-maven-3.5.4/bin/:$PATH"
+	}
 
     stages {
 	     stage('Git clone ') {
