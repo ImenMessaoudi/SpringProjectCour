@@ -51,7 +51,7 @@ pipeline {
 			       [
 				       artifactId: 'spring-boot-starter-parent',
 				       classifier: '',
-				       file: 'target/FirstProjectSpring-0.0.1-SNAPSHOT.war', type: 'war'
+				       file: 'target/FirstProjectSpring-0.0.1-SNAPSHOT.jar', type: 'jar'
 			       ]
 		       ],
 			       credentialsId: 'nexus3',
