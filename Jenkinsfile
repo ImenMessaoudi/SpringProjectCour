@@ -9,7 +9,7 @@ pipeline {
 	     stage('Git clone ') {
             steps {
                 git branch: 'main',
-                credentialsId: 'Jenkins-GitHub',
+                credentialsId: 'Token-Github',
                 url: 'https://github.com/ImenMessaoudi/SpringProjectCour.git'
                
             }
