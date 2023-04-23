@@ -20,12 +20,7 @@ pipeline {
 		       sh """mvn -version"""
 		      }
 		    }
-	    stage('Testing java') {
-		      steps {
-		       sh """java -version"""
-		      }
-		    }
-	    
+	   
 	    stage('Mvn Clean ') {
                         steps {
                            sh """mvn clean"""
@@ -48,7 +43,26 @@ pipeline {
                     }
 
                  }
+		        
             }
+	    stage('Uploader To Nexus') {
+		      steps {
+		       nexusArtifactUploader artifacts: [
+			       [
+				       artifactId: 'spring-boot-starter-parent',
+				       classifier: '',
+				       file: 'target/FirstProjectSpring-0.0.1-SNAPSHOT.war', type: 'war'
+			       ]
+		       ],
+			       credentialsId: 'nexus3',
+			       groupId: 'org.springframework.boot',
+			       nexusUrl: '192.168.0.200:8081',
+			       nexusVersion: 'nexus3',
+			       protocol: 'http',
+			       repository: 'http://192.168.0.200:8081/repository/Simpleapp-Release',
+			       version: '0.0.1-SNAPSHOT'
+		      }
+		    }
 	    
 	    
            
